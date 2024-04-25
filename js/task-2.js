@@ -2,12 +2,10 @@
 
 // Kod w trybie ścisłym
 
-function formatMessage(message, maxLength) {
-    const message
-
-    if (message.length > maxLength) {
-        return maxLength + "...";
-    } else if (message.length <= maxLength) {
+function formatMessage(message, length) {
+    if (message.length > length) {
+        return message.slice(0, length) + "...";
+    } else if (message.length <= length) {
         return message;
     }
 }
@@ -19,8 +17,3 @@ console.log(formatMessage("Vestibulum facilisis purus nec", 20)); // "Vestibulum
 console.log(formatMessage("Vestibulum facilisis purus nec", 30)); // "Vestibulum facilisis purus nec"
 console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 15)); // "Nunc sed turpis..."
 console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 41)); // "Nunc sed turpis a felis in nunc fringilla"
-
-
-const username = "Poly"; 
-
-const message = `Username ${username} is ${username.length} characters long` 
