@@ -2,26 +2,20 @@
 
 // Kod w trybie ścisłym
 function getShippingCost(country) {
-    let price = 170;
     switch (country) {
         case 'Australia':
-        // let price = 170;
-            break;
+            let price = 170;
         case 'China':
-        // let price = 100;
-            break;
+            price = 100;
         case 'Chile':
-        // let price = 250;
-            break;
+            price = 250;
         case 'Jamaica':
-            // let price = 120;
-            break;
+            price = 120;
             return `Shipping to ${country} will cost ${price} credits`;
+            break;
         default:
             return "Sorry, there is no delivery to your country";
-    }
-
-
+    }  
 }
 
 // Sprawdzenie skryptu:
